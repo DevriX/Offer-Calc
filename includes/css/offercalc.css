@@ -1,0 +1,98 @@
+/* Offer Calc CSS stylesheet */
+
+/* Styling the frontend table in a widget. Sidebar widgets only. */
+
+table.widget_offercalc_table input[type='text'], 
+table.shortcode_offercalc_table input [type='text'] {
+	width: 80px;
+	height: 20px;
+}
+	
+div.offercalc_wrapper div.total_offercalc_sum {
+	float: right;
+	font-weight: bold;
+}
+
+table.widget_offercalc_table th, 
+table.widget_offercalc_table td, 
+table.shortcode_offercalc_table th, 
+table.shortcode_offercalc_table td {
+	text-align: center !important;
+}
+
+.offer_selector_shortcode, .offer_sum {
+	width: 50%;
+}
+
+.clr {
+	clear: both;
+}
+
+.widget_offercalc_table, 
+.shortcode_offercalc_table {
+	border: 1px solid #f0f0f0;
+}
+
+.widget_offercalc_table tbody tr:first-child, 
+.shortcode_offercalc_table tbody tr:first-child {
+	background: #384967;
+	color: #fff;
+}
+
+.widget_offercalc_table tbody:hover > tr:first-child, 
+.shortcode_offercalc_table tbody:hover > tr:first-child {
+	background: #82b541;
+}
+
+.widget_offercalc_table tbody:hover > tr, 
+.shortcode_offercalc_table tbody:hover > tr {
+	background: #f8f8f8;
+}
+
+.widget_offercalc_table tbody tr:first-child:hover, 
+.shortcode_offercalc_table tbody tr:first-child:hover {
+	background: #82b541;
+	color: #fff;
+}
+
+.widget_offercalc_table tbody tr, 
+.shortcode_offercalc_table tbody tr {
+	border: none;
+	transition: 0.3s ease all; 
+}
+
+.widget_offercalc_table tbody tr:hover,
+.shortcode_offercalc_table tbody tr:hover {
+	background: #fff;
+	transition: 0 ease all; 
+	cursor: pointer;
+}
+
+.widget_offercalc_table tbody tr td, 
+.shortcode_offercalc_table tbody tr td {
+	border: none;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.widget_offercalc_table input, 
+.shortcode_offercalc_table input {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+	color: #2B2B2B;
+	padding: 8px 10px 7px;
+}
+
+.total_offercalc_sum {
+	color: #ccc;
+	font-weight: normal;
+}
+
+.total_offercalc_sum > span {
+	color: black;
+	font-weight: bold;
+}
+
+.widget_offercalc_table th, 
+.shortcode_offercalc_table th {
+	color: white !important;
+}

@@ -1,0 +1,187 @@
+/**
+ * All Types Meta Box Class CSS
+ *
+ * CSS used for the custom metaboxes and other form items.
+ */
+
+/* =Common Rules for all fields.
+----------------------------------------------- */
+.form-table td.wpd-mb-meta-field { 
+	padding: 10px 10px 20px; 
+	margin: 0px; 
+}
+.wpd-mb-meta-label { 
+	margin: 0 0 5px 0; 
+	padding: 5px 0 0 0; 
+}
+.wpd-mb-meta-radio-label { 
+	padding-right: 10px; 
+}				
+.wpd-mb-meta-file-upload-label { 
+	clear: both; 
+	margin: 5px 0px 5px 1px; 
+}	
+
+/* =Form Fields
+----------------------------------------------- */
+.postbox .wpd-mb-meta-field input,
+.postbox .wpd-mb-meta-field textarea { 
+	padding: 5px; 
+	line-height: 18px; 
+} 
+.postbox .wpd-mb-meta-field input.wpd-mb-meta-radio{}
+.postbox .wpd-mb-meta-field input.wpd-mb-meta-color { 
+	border: 0px; 
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	border-radius: 5px; 
+	margin-right: 10px; 
+	min-width: 100px; 
+}
+.wpd-mb-meta-field input:focus, 
+.wpd-mb-meta-field textarea:focus { 
+	background: #fffff8; 
+}
+#wpcontent select.wpd-mb-meta-select { 
+	height: 30px !important; 
+	padding: 5px; 
+	display: block; 
+	min-width: 200px; 
+}
+.wpd-mb-meta-field .desc-field { 
+	color: #AAA; 
+	font-style: italic; 
+	margin: 5px 0 0 3px !important; 
+	font-size: 13px; 
+}
+.wpd-mb-meta-field .wp_themeSkin table.mceLayout { 
+	border: 1px solid #DFDFDF; 
+}
+#post-body .wpd-mb-meta-field .wp_themeSkin .mceStatusbar a.mceResize { 
+	top: -25px; 
+} 
+p.wpd-mb-meta,
+.desc-field {
+	color: #7d7d7d;
+	font-style: italic;
+}
+.wp-editor-container .wp_themeSkin iframe {
+	background: #fff !important;
+}
+
+/* =Uploaded Images
+----------------------------------------------- */
+.wpd-mb-meta-images li { 
+	margin: 5px 10px 0px 0; 
+	float: left; 
+	width: 150px; 
+	height: 150px; 
+	text-align: center; 
+	border: 3px solid #ccc; 
+	cursor: move; 
+	position: relative; 
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	border-radius: 3px; 
+}
+.wpd-mb-meta-images img { 
+	width: 150px; 
+	height: 150px; 
+}
+.wpd-mb-meta-images a { 
+	position: absolute; 
+	top: -12px; 
+	right: -12px; 
+	color: #fff;  
+	font-weight: bold; 
+	padding: 5px; 
+}
+.wpd-mb-meta-images .wpd-mb-meta-delete-file img{
+	width: 16px; 
+	height: 16px; 
+}
+
+/* =Upload Button
+----------------------------------------------- */
+.wpd-mb-meta-upload-button { 
+	float: left; 
+	clear: both; 
+	margin-top: 10px; 
+}
+.wpd-mb-meta-add-file { 
+	float: left; 
+	clear: both; 
+	margin-top: 10px; 
+}
+ 
+/* =Time Picker
+----------------------------------------------- */
+.ui-timepicker-div { 
+	font-size: 0.9em; 
+}
+.ui-timepicker-div .ui-widget-header { 
+	margin-bottom: 8px; 
+}
+.ui-timepicker-div dl { 
+	text-align: left; 
+}
+.ui-timepicker-div dl dt { 
+	height: 25px; 
+}
+.ui-timepicker-div dl dd { 
+	margin: -25px 0 10px 65px; 
+}
+.ui-timepicker-div td { 
+	font-size: 90%; 
+}
+
+/* =Repater Block
+----------------------------------------------- */
+.wpd-mb-meta-repater-block {
+	background: #fff;
+	border: 1px solid #DFDFDF;
+	border-radius: 5px;
+	padding: 5px 5px 5px 10px;
+	margin-bottom: 15px;
+	float: left;
+	position: relative;
+	display: block;
+	width: 100%;
+}
+.wpd-mb-meta-repater-block img {
+	margin-right: 15px;
+	float: inherit;
+}
+.wpd-mb-meta-repeat img {
+	cursor: pointer;
+}
+/* inline */
+.wpd-mb-meta-inline label {
+	font-size: 12px !important;
+}
+.wpd-mb-meta-inline textarea {
+	height: 130px;
+	width: 200px;
+}
+
+.wpd_mb_success_msg .wp-editor {
+	background-color: #fff !important;
+}
+.wpd-mb-meta-repater-block {
+	width : 100% !important;
+}
+
+#adduser .form-field input, input.regular-text {
+    width: 19em !important;
+}
+table.repeater-table form-table tr td:last-child input{
+	width: 10em !important;
+}
+
+.wpd-mb-meta-re-toggle img{
+	float:right !important;
+}
+
+#remove-_offercalc_service_fields{
+	float:right !important;
+}
