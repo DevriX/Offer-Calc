@@ -7,6 +7,7 @@
  * Stable tag: 1.0
  * Author: DevriX
  * Author URI: http://devrix.com
+ * Text Domain: offercalc
  * License: GPL2
  
  Copyright 2014 DevriX (email : mpeshev@devrix.com)
@@ -88,7 +89,7 @@ function offer_calc_load_textdomain() {
   
 }
 
-add_action( 'init', 'offer_calc_load_textdomain' );
+add_action( 'plugins_loaded', 'offer_calc_load_textdomain' );
 
 /**
  * Plugin Activation hook
