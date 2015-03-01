@@ -65,3 +65,7 @@ Created the Widget
 
 v0.3a
 Adding to database form data
+
+== Credits ==
+Serbian Translation
+- Ogi Djuraskovic, http://firstsiteguide.com/
