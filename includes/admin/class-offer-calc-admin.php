@@ -143,7 +143,7 @@ class Offer_Calc_Admin_Pages{
 		if(isset($_POST['offer_calc_form_migrate'])){
 			$this->model->offer_calc_migrate_data();			
 			// get redirect url
-			$redirect_url = add_query_arg( array( 'post_type' => 'offer-calc', 'page' => 'offer-calc-settings','message' => '11' ), admin_url( 'edit.php' ) );
+			$redirect_url = add_query_arg( array( 'post_type' => OFFER_CALC_POST_TYPE, 'page' => 'offer-calc-settings','message' => '11' ), admin_url( 'edit.php' ) );
 			wp_redirect( $redirect_url );	
 		}
 	}
@@ -159,7 +159,7 @@ class Offer_Calc_Admin_Pages{
 		if(isset($_POST['offer_calc_form_delete'])){
 			$this->model->offer_calc_delete_data();
 			// get redirect url
-			$redirect_url = add_query_arg( array( 'post_type' => 'offer-calc', 'message' => '11' ), admin_url( 'edit.php' ) );
+			$redirect_url = add_query_arg( array( 'post_type' => OFFER_CALC_POST_TYPE, 'message' => '11' ), admin_url( 'edit.php' ) );
 			wp_redirect( $redirect_url );	
 		}
 	}
@@ -181,14 +181,14 @@ class Offer_Calc_Admin_Pages{
 		}
 		
 		//old data delete notice
-		if( isset($_GET['message'], $_GET['post_type']) && $_GET['post_type'] == 'offer-calc' && $_GET['message'] == '11' && !isset($_GET['page']) ){
+		if( isset($_GET['message'], $_GET['post_type']) && $_GET['post_type'] == OFFER_CALC_POST_TYPE && $_GET['message'] == '11' && !isset($_GET['page']) ){
 		    echo '<div class="updated">
 		        <p>' . __( 'Offer tables deletes successfully!', 'offercalc' ).'</p>
 		    </div>';
 		}
 		
 		//old data delete notice
-		if( get_option( 'ofc_pro_notice' ) == 1 ){		    
+		/*if( get_option( 'ofc_pro_notice' ) == 1 ){		    
 		    ?>
 		    <div id="message" class="updated offercalc-message wc-connect">
 				<p>
@@ -196,8 +196,8 @@ class Offer_Calc_Admin_Pages{
 				</p>
 				<p class="submit"><a class="skip button-secondary" href="<?php echo add_query_arg( 'hide_pro_notice', 'true', admin_url( 'edit.php?post_type=offer-calc' ) ); ?>"><?php _e( 'Dismiss', 'offercalc' ); ?></a></p>
 			</div>
-		<?php
-		}
+		<?php 
+		}*/
 	}
 	
 	/**
@@ -218,8 +218,10 @@ class Offer_Calc_Admin_Pages{
 	 * @package Offer calc
 	 * @since 1.0.0*/
 	
-	public function offer_calc_side_metabox_pro_info() {		 
-		  add_meta_box( 'offer_calc_sidemeta_pro_info', __( 'Offer Calc Pro', 'offercalc' ), array( $this, 'offer_calc_metabox_pro_content' ), OFFER_CALC_POST_TYPE, 'side', 'core' );			 
+	public function offer_calc_side_metabox_pro_info() {
+		if( get_option( 'ofc_pro_notice' ) == 1 ){
+			add_meta_box( 'offer_calc_sidemeta_pro_info', __( 'Offer Calc Pro', 'offercalc' ), array( $this, 'offer_calc_metabox_pro_content' ), OFFER_CALC_POST_TYPE, 'side', 'core' );			 
+		}
 	}
 	
 	/**
@@ -261,8 +263,10 @@ class Offer_Calc_Admin_Pages{
 	 * @package Offer calc
 	 * @since 1.0.0*/
 	function offer_calc_dashboard_widget() {
-	
-		wp_add_dashboard_widget( __('offer_calc_dashboard_widget', 'offercalc'), __('Offer Calc', 'offercalc'),  array( $this, 'offer_calc_dashboard_widget_content' ));	
+		
+		if( get_option( 'ofc_pro_notice' ) == 1 ){
+			wp_add_dashboard_widget( __('offer_calc_dashboard_widget', 'offercalc'), __('Offer Calc', 'offercalc'),  array( $this, 'offer_calc_dashboard_widget_content' ));	
+		}
 	}
 	
 	/**
@@ -289,8 +293,8 @@ class Offer_Calc_Admin_Pages{
 		
 		global $post;			
 				
-		if($post->post_type == 'offer-calc' ){
-			show_admin_bar( false );
+		if( $post->post_type == OFFER_CALC_POST_TYPE ){
+			//show_admin_bar( false );
 			$attr['offer_slug'] = $post->post_name;		
 			$content .= $this->ofr_shortcode->offer_calc_shortcode( $attr, $content='' );
 		}
