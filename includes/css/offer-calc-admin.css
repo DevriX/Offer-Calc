@@ -1,3 +1,6 @@
+.offer-calc-error{
+	color:red;
+}
 .manage-column.column-shortcode {
     width: 30%;
 }
@@ -209,6 +212,10 @@
 	margin-top: 20px;
 }
 
+tr .chzn-container{  width:200px !important;}
+tr .chzn-drop { width:198px !important;}
+tr .chzn-search input { width:163px !important;}
+
 @media (max-width: 1000px) {
 	.oc-help-page .row .one-third {
 		width: 100%;
@@ -224,5 +231,36 @@
 	.oc-help-page .content {
 		width: 100%;
 		float: none;
+	}
+}
+.offer-calc-price-error, .offer-calc-offer-price-error, .offer-calc-vat-amount-error, .offer-calc-meta-error {
+	color: red;
+}
+.wpd-mb-meta-multiple_textbox{
+	/*width:20%;	*/
+}
+
+.repeater-table input[type="text"] {
+	width: 100% !important;
+	max-width: 320px;
+}
+
+.repeater-table input[type="text"].wpd-mb-meta-multiple_textbox {
+	width: 100%;
+}
+
+.repeater-table th {
+	width: auto;
+}
+
+@media (min-width: 1200px) {
+	.repeater-table input[type="text"].wpd-mb-meta-multiple_textbox {
+		width: 33.3333% !important;
+		max-width: 100px;
+	}
+
+	.repeater-table input[type="text"] {
+		width: 100% !important;
+		max-width: 267px;
 	}
 }

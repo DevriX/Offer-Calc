@@ -189,8 +189,9 @@ class Offer_Calc_Meta_Box {
 		// Enqueu JQuery UI, use proper version.
       
 		// Enqueu JQuery select2 library, use proper version.
-		wp_enqueue_style( 'wps-multiselect-select2-css', $plugin_path . '/js/chosen/chosen.css', array(), null );	
-		wp_enqueue_script( 'wps-multiselect-select2-js', $plugin_path . '/js/chosen/chosen.jquery.js', array( 'jquery' ), false, true );    
+		wp_enqueue_style( 'wpd-mb-chosen-css', $plugin_path . '/js/chosen/chosen.css', array(), null );	
+		wp_enqueue_style( 'wpd-mb-chosen-custom-css', $plugin_path . '/js/chosen/chosen-custom.css', array(), null );
+		wp_enqueue_script( 'wpd-mb-chosen-js', $plugin_path . '/js/chosen/chosen.jquery.js', array( 'jquery' ), false, true );    
 	}
   
 	/**
@@ -448,7 +449,7 @@ class Offer_Calc_Meta_Box {
 		//var_dump($this->_fields);
 		wp_nonce_field( basename(__FILE__), 'at_meta_box_nonce' );
 		
-		echo '<table class="form-table">';
+		echo '<table class="offer-calc-wrapper form-table">';
 		$edit_class_arr = array( '_offercalc_image_title', '_offercalc_service_title', '_offercalc_price_title', '_offercalc_count_title', '_offercalc_total_title' );
 		$is_header = 0;
 		
@@ -565,10 +566,10 @@ class Offer_Calc_Meta_Box {
 							$style = ( !empty( $replace_dp ) ? "display:table-row" : 'display:none');
 							echo '<tr class="cnt_type_options" style="'.$style.'">';	
 						}
-						elseif ( $f['type'] == 'multiple_textbox' ){								
+						/*elseif ( $f['type'] == 'multiple_textbox' ){								
 							$style = ( empty( $replace_dp ) ) ? 'display:table-row' : 'display:none' ;
 							echo '<tr style="'.$style.'">';
-						}
+						}*/
 						elseif ( isset($real_id) && $real_id == 'count_field_type_opt' ){
 							
 						}
@@ -883,9 +884,11 @@ class Offer_Calc_Meta_Box {
 		  
 		$this->show_field_begin( $field, $meta );
 		
+		$i = 1;
 		foreach ( $field['options'] as $key => $value ) {
-			echo "<input type='radio' class='wpd-mb-meta-radio' name='{$field['id']}' value='{$key}'" . checked( in_array( $key, $meta ), true, false ) . " /> <span class='wpd-mb-meta-radio-label'>{$value}</span>";
-		}		
+			echo "<input type='radio' class='wpd-mb-meta-radio' id='".$field['id'].'-'.$i."' name='{$field['id']}' value='{$key}'" . checked( in_array( $key, $meta ), true, false ) . " /> <label for='".$field['id'].'-'.$i."' class='wpd-mb-meta-radio-label'>{$value}</label>";
+			$i++;
+		}
 		
 		$this->show_field_end( $field, $meta );
 	}
@@ -1013,12 +1016,12 @@ class Offer_Calc_Meta_Box {
 			$html .= "<span class='mupload_img_holder'><img src='".$meta['src']."' style='height: 150px;width: 150px;' /></span>";
 			$html .= "<input type='hidden' name='".$field['id']."[id]' id='".$field['id']."[id]' value='".$meta['id']."' />";
 			$html .= "<input type='hidden' name='".$field['id']."[src]' id='".$field['id']."[src]' value='".$meta['src']."' />";
-			$html .= "<input class='wpd-mb-meta-delete_image_button button-secondary' type='button' rel='".$field['id']."' value='Delete Image' />";
+			$html .= "<input class='wpd-mb-meta-delete_image_button button-secondary ".$field['class']."' type='button' rel='".$field['id']."' value='Delete Image' />";
 		} else {
 			$html .= "<span class='mupload_img_holder'></span>";
 			$html .= "<input type='hidden' name='".$field['id']."[id]' id='".$field['id']."[id]' value='' />";
 			$html .= "<input type='hidden' name='".$field['id']."[src]' id='".$field['id']."[src]' value='' />";
-			$html .= "<input class='wpd-mb-meta-upload_image_button button-secondary' type='button' rel='".$field['id']."' value='" . __( 'Upload Image', 'wpdmb' ) . "' />";
+			$html .= "<input class='wpd-mb-meta-upload_image_button button-secondary ".$field['class']."' type='button' rel='".$field['id']."' value='" . __( 'Upload Image', 'wpdmb' ) . "' />";
 		}
 		echo $html;
 	}

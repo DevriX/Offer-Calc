@@ -3,14 +3,13 @@
  * Plugin Name: Offer Calc
  * Plugin URI: http://offercalc.com/
  * Description: Offer Calc is a simple plugin letting your site visitors to calculate your services at final cost.
- * Version: 1.0
- * Stable tag: 1.0
+ * Version: 1.1
+ * Stable tag: 1.1
  * Author: DevriX
  * Author URI: http://devrix.com
- * Text Domain: offercalc
  * License: GPL2
  
- Copyright 2014 DevriX (email : mpeshev@devrix.com)
+ Copyright 2015 DevriX (email : contact@devrix.com)
  
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License, version 2, as
@@ -82,10 +81,9 @@ if ( ! defined( 'OFFER_CALC_PRO_SITE_URL' ) ) {
  * @since 1.0.0
  * 
  */
-
 function offer_calc_load_textdomain() {
 	
-  load_plugin_textdomain( 'offercalc', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	load_plugin_textdomain( 'offercalc', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
   
 }
 

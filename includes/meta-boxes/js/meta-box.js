@@ -133,7 +133,7 @@ function update_repeater_fields(){
 	/**
      * enable select2
      */
-    fancySelect();
+    Off_Calc_fancySelect();
   
   }
 var Ed_array = Array;
@@ -169,7 +169,7 @@ jQuery(document).ready(function(jQuery) {
    * enable select2
    * @since 2.9.8
    */
-  fancySelect();
+  Off_Calc_fancySelect();
 
   /**
    * repeater sortable
@@ -275,8 +275,10 @@ jQuery(document).ready(function(jQuery) {
       if (colo.length == 7)
         jQuery(this).css('background',colo);
     });
-  }else{
-    //jQuery('.wpd-mb-meta-color-iris').wpColorPicker();
+  }else {
+  	if ( jQuery('.wpd-mb-meta-color-iris').length  ) {
+    	jQuery('.wpd-mb-meta-color-iris').wpColorPicker();
+  	}
   }
   
   /**
@@ -641,9 +643,9 @@ jQuery(document).ready(function(jQuery) {
  * Select 2 enable function
  * @since 2.9.8
  */
-function fancySelect(){
-  jQuery("select").each(function (){
-    if(! jQuery(this).hasClass('no-fancy'))
-      jQuery(this).chosen();
-  });
+function Off_Calc_fancySelect(){
+	jQuery(".offer-calc-wrapper select").each(function (){
+		if(! jQuery(this).hasClass('no-fancy'))
+			jQuery(this).css('width','250px').chosen({search_contains:true});
+	});
 }

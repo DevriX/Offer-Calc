@@ -17,7 +17,7 @@ if ( is_admin() ) {
 		'context' 		=> 'normal',								// where the meta box appear: normal (default), advanced, side; optional
 		'priority' 		=> 'high',									// order of meta box: high (default), low; optional
 		'fields' 		=> array(),									// list of meta fields (can be added by field arrays)
-		'local_images' 	=> false,									// Use local or hosted images (meta box images for add/remove)
+		'local_images' 	=> false									// Use local or hosted images (meta box images for add/remove)
 	);
 	
 	$ofc_meta =  new Offer_Calc_Meta_Box( $offer_calc_meta_config );
@@ -26,8 +26,12 @@ if ( is_admin() ) {
 	
 	// service	
 	$service_fields[] = $ofc_meta->addText( 'name', array( 'validate_func' => 'escape_html', 'name'=> __( 'Service Name', 'offercalc' ), ), true );
-	$service_fields[] = $ofc_meta->addText( 'price', array( 'validate_func' => 'escape_html', 'name'=> __( 'Service Price', 'offercalc' ), ), true );
+	$service_fields[] = $ofc_meta->addText( 'price', array( 'validate_func' => 'escape_html', 'name'=> __( 'Service Price', 'offercalc' ), 'class' => 'check_numeric_value' ), true );
 	
+	//Add dropdown limit
+	$options = array('from'=>'From:', 'to'=>'To:');
+	$service_fields[] = $ofc_meta->addMultipleTextbox( 'dropdown_limit', $options, array( 'validate_func' => 'escape_html', 'name'=> __( 'Set Dropdown Limit', 'offercalc' ) ), true ) ;
+		
 	//Apply new fields/option in offer meta. 	
 	
 	$service_fields = apply_filters( 'offer_calc_add_image',  $service_fields, $ofc_meta );
