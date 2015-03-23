@@ -90,6 +90,8 @@ class Offer_Calc_Shortcodes {
 										<div class="offer_calc_order offer_calc_service-next">
 											<div class="offer_calc_ordertitle">
 												<label><?php echo apply_filters ( 'offer_calc_dynamic_title', __('Price','offercalc'), $offer_post[0]->ID  );?></label>
+											</div>
+											<div>
 												<span class="offer_calc_currency"><?php echo apply_filters('offer_calc_add_currency', $price, $offer_post[0]->ID);?></span>
 											</div>
 										</div>

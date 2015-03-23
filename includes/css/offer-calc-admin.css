@@ -237,5 +237,30 @@ tr .chzn-search input { width:163px !important;}
 	color: red;
 }
 .wpd-mb-meta-multiple_textbox{
-	width:20%;	
+	/*width:20%;	*/
+}
+
+.repeater-table input[type="text"] {
+	width: 100% !important;
+	max-width: 320px;
+}
+
+.repeater-table input[type="text"].wpd-mb-meta-multiple_textbox {
+	width: 100%;
+}
+
+.repeater-table th {
+	width: auto;
+}
+
+@media (min-width: 1200px) {
+	.repeater-table input[type="text"].wpd-mb-meta-multiple_textbox {
+		width: 33.3333% !important;
+		max-width: 100px;
+	}
+
+	.repeater-table input[type="text"] {
+		width: 100% !important;
+		max-width: 267px;
+	}
 }

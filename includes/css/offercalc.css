@@ -165,15 +165,14 @@ table.shortcode_offercalc_table td {
 	float:left;
 }
 .offer_calc_wrapper{
-	border-bottom: 2px solid #f3f3f3;
+	/*border-bottom: 2px solid #f3f3f3;*/
 	float: left;
-	margin-bottom: 15px;
+	padding: 15px 0;
 	max-width: 600px;
 	width: 100%;
 }
 .offer_calc_currency{
 	font-weight:normal;
-	padding:10px;
 }
 .offer_calc_service_name {
     font-size: 22px;
@@ -184,7 +183,7 @@ table.shortcode_offercalc_table td {
 	width: 100%;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	padding:5px;
+	padding:3px;
 	background:#fff;
 }
 .offer_selector_pro{
@@ -193,9 +192,9 @@ table.shortcode_offercalc_table td {
 	border-radius: 3px;
 	overflow: hidden;
 	width: 100%;
-	padding: 0.40rem;
 	background:#ffffff;
 	font-size:14px;
+	padding:6px;
 }
 #offer_count_test_2{
 	border: 1px solid #ccc;
@@ -250,6 +249,7 @@ table.shortcode_offercalc_table td {
 	max-width:600px;
 	float:left;
 	width:100%;
+	border-bottom: 1px solid #f0f0f0;
 }
 .offer_calc_order.offer_calc_service-click{
 	max-width:600px;
