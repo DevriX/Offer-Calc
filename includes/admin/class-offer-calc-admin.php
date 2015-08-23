@@ -291,13 +291,15 @@ class Offer_Calc_Admin_Pages{
 	 */  
 	function offer_calc_view_post( $content ) {		
 		
-		global $post;			
+		global $post;		
 				
-		if( $post->post_type == OFFER_CALC_POST_TYPE ){
+		if( $post->post_type == OFFER_CALC_POST_TYPE && is_single() ){
 			//show_admin_bar( false );
 			$attr['offer_slug'] = $post->post_name;		
 			$content .= $this->ofr_shortcode->offer_calc_shortcode( $attr, $content='' );
 		}
+		
+		
 		return $content;
 	}		
 	
@@ -328,7 +330,7 @@ class Offer_Calc_Admin_Pages{
  		add_action( 'add_meta_boxes', array( $this, 'offer_calc_side_metabox_shortcode') );
  		add_action( 'add_meta_boxes', array( $this, 'offer_calc_side_metabox_pro_info') );
  		
- 		add_action( 'wp_dashboard_setup', array($this,'offer_calc_dashboard_widget') ); 	
+ 		add_action( 'wp_dashboard_setup', array($this,'offer_calc_dashboard_widget') );
  		
  		add_filter( 'the_content', array($this,'offer_calc_view_post'), 10 ,1); 
 	}

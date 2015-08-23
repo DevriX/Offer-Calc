@@ -1,0 +1,118 @@
+/********** CSS for Shortcode Popup ***********/
+.offer-calc-popup-content {
+    margin: 0 auto 10px;
+    min-height: 450px;
+    display: none;
+	position: absolute;
+	border: 1px solid #555555;
+	top: 60px;
+	text-align: left;
+	left: 17%;
+	width: 800px;
+	padding: 20px 35px;
+	background: none repeat scroll 0 0 #FFFFFF;
+	z-index:1002;
+	overflow: auto;
+	font: 12px "Lucida Grande",Verdana,Arial,sans-serif;
+	box-shadow: 0 4px 30px #000000;
+	color: #000000;	
+}
+.offer-calc-popup-content .description {
+	margin-left: 0px !important
+}
+.offer-calc-popup-overlay {
+	display: none;
+	background-color: #000000;
+    height: 100%;
+    left: 0;
+    opacity: 0.75;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.offer-calc-popup-header-title {
+    float: left;
+    padding: 6px 10px 0;
+}
+.offer-calc-popup-close {
+ 	float: right;
+    padding: 6px 10px 0;
+    text-align: right;
+}
+.offer-calc-header-popup {
+    background-color: #222222;
+    color: #CFCFCF;
+    height: 27px;
+    left: -37px;
+    position: relative;
+    top: -20px;
+    width: 109%;
+}
+.offer-calc-popup-content table.form-table {
+	margin : 15px !important;
+	width: 80% !important;	
+}
+#ww_wpsc_insert_shortcode {
+	margin: 15px;	
+}
+.offer-calc-shortcode-options {
+ 	display: none;
+}
+.offer-calc-popup-error {
+	padding:10px;
+	border:1px solid #CC0000;
+	background-color:#FFEBE8;
+	border-radius:5px;
+}
+.offer-calc-shortcodes-options,.offer-calc-popup-error{
+	display:none;
+}
+INPUT.wpd-mb-meta-multiple_textbox{
+	width:20% !important;
+}
+/********** CSS for Shortcode Popup END ***********/
+
+/********** CSS for Autoresponder Metabox START ***********/
+
+.offer-calc-pro-autoresponder-table {
+	width: 100%; 	
+}
+.offer-calc-pro-aweber-table {
+	width: 100%;
+}
+.offer-calc-pro-gr-table {
+	width: 100%;
+}
+.offer-calc-pro-mc-table {
+	width: 100%;
+}
+.offer-calc-pro-autoresponder-valign {
+	vertical-align: top;
+	width: 18%;
+}
+.offer-calc-pro-autoresponder-td-border {
+	border:2px solid #999999;
+}
+.offer-calc-hide {
+	display: none;
+}
+.offer-calc-pro-wrp{
+	border: 4px double #cccccc;
+	display: inline-block;
+	margin: 0px 10px 10px 0px;
+	max-width: 275px;
+	min-height: 65px;
+	padding: 10px;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+	cursor: pointer;
+}
+.offer-calc-active-res {
+    border: 4px solid #cccccc;
+}
+.offer-calc-pro-wrp .offer-calc-autores-radio{
+	display: none;
+}
+/********** CSS for Autoresponder Metabox END ***********/

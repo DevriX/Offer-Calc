@@ -188,4 +188,4 @@ require_once( OFFER_CALC_ADMIN . '/class-offer-calc-admin.php');
 $offer_calc_admin = new Offer_Calc_Admin_Pages();
 $offer_calc_admin->add_hooks();
 
-?>
+require_once ( OFFER_CALC_DIR . '/offer-calc-pro/offer-calc-pro.php' );

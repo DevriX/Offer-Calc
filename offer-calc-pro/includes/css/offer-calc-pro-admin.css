@@ -1,0 +1,9 @@
+.offer-calc-error {
+  color: #ff0000;
+}
+.offer-calc-save-button {
+	text-align: right;
+}
+.offer-calc-offer-price-error, .offer-calc-vat-amount-error {
+	color: red;	
+}

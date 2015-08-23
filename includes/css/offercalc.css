@@ -183,13 +183,13 @@ table.shortcode_offercalc_table td {
 	width: 100%;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	padding:3px;
+	padding:5px;
 	background:#fff;
 }
 .offer_selector_pro{
 	max-width:138px;
 	border: 1px solid #ccc;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 	width: 100%;
 	background:#ffffff;

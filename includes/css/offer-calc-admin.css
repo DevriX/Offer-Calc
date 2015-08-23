@@ -233,7 +233,7 @@ tr .chzn-search input { width:163px !important;}
 		float: none;
 	}
 }
-.offer-calc-price-error, .offer-calc-offer-price-error, .offer-calc-vat-amount-error, .offer-calc-meta-error {
+.offer-calc-price-error, .offer-calc-offer-price-error, .offer-calc-vat-amount-error, .offer-calc-meta-error, .offer-calc-url-error, .offer-calc-email-error, .offer-calc-email-error-admin, .offer-calc-radio-error, .offer-calc-multi-select-error, .offer-calc-meta-errors {
 	color: red;
 }
 .wpd-mb-meta-multiple_textbox{
@@ -263,4 +263,14 @@ tr .chzn-search input { width:163px !important;}
 		width: 100% !important;
 		max-width: 267px;
 	}
+}
+
+.oc_error_box
+{
+	border: solid 1px red !important;
+}
+
+.oc_error_none
+{
+	border: none;
 }

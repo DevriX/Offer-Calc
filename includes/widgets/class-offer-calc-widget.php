@@ -32,7 +32,7 @@ class Offer_Calc_Widget extends WP_Widget {
 		global $offer_calc_model, $offer_calc_shortcodes;
 		
 		$widget_ops		= array('classname' => 'offercalc_widget', 'description' => __('The Offer Calc Widget for calculation'));
-		parent::WP_Widget(false, __('Offer Calc Widget', 'offercalc'), $widget_ops);
+		parent::__construct(false, __('Offer Calc Widget', 'offercalc'), $widget_ops);
 		$this->model		= $offer_calc_model;
 		$this->shortcode	= $offer_calc_shortcodes;
 	}
