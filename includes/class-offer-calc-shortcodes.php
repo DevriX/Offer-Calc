@@ -134,7 +134,7 @@ class Offer_Calc_Shortcodes {
 							} 
 						endforeach; 
 						
-						?><div class="error err-total" for="offer_total" style="display:none;">Total should be grater than zero.</div>
+						?><div class="error err-total" for="offer_total" style="display:none;">Total should be greater than zero.</div>
 						<div class="error err-submission-value" for="offer_submission_value" style="display:none;"></div>
 						<?php do_action( 'offer_calc_before_total',  $offer_post[0]->ID ) ;?>
 						<div class="total-offercalc-sum-div total_offercalc_sum"><?php _e('Total: ','offercalc');?><?php echo apply_filters('offer_calc_add_currency', $total, $offer_post[0]->ID);?></div>						

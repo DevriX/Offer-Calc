@@ -286,7 +286,7 @@ function offerValidate( frm_obj ){
 			
 			if( tot <= sub_value ){	
 				
-				frm_obj.find('.err-submission-value').show().html( "Total should be grater than " + sub_value + "." );
+				frm_obj.find('.err-submission-value').show().html( "Total should be greater than " + sub_value + "." );
 				valid_offer = 0;
 			} else {
 				
