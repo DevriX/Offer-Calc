@@ -1,16 +1,16 @@
 ﻿=== Offer Calc ===
 Contributors: devrix, nofearinc
 Tags: offer, offers, calculator, calculation, cost, administration, form, plugin, price, request, shortcode, shortcodes, website, widget
-Requires at least: 3.0
-Tested up to: 3.9.1
-Stable tag: 1.0
+Requires at least: 3.8
+Tested up to: 4.3
+Stable tag: 1.2
 License: GPLv2 or later
 
 Offer Calc is a simple plugin letting your site visitors to calculate your services at final cost. 
 
 == Description ==
 
-The new Offer Calc 1.0 is here!
+The new Offer Calc 1.2 is here!
 
 Offer Calc is a simple plugin letting your site visitors to calculate your services at final cost. Place the calc in a page or in the widget area. The layout includes a number of rows, each one consists of:
 

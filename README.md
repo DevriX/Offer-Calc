@@ -1,20 +1,21 @@
 Offer-Calc
 ==========
 
-Offer Calc is a simple plugin letting your site visitors to calculate your services at final cost.
-
 Offer Calc is a simple plugin letting your site visitors to calculate your services at final cost. 
 
 Description
 ----------
 
-The new Offer Calc 1.0 is here!
+The new Offer Calc 1.2 is here!
 
 Offer Calc is a simple plugin letting your site visitors to calculate your services at final cost. Place the calc in a page or in the widget area. The layout includes a number of rows, each one consists of:
 
 * service name/description
 * price per unit
 * input box for clients to select number of units (number of pages, number of apples etc)
+* different types of input - text, checkbox, radio, dropdown
+* email capabilities for sending an offer
+* offer validation for minimum amount
 * label for total cost
 * at the bottom - total sum of all labels.
 
