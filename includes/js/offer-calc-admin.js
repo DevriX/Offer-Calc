@@ -95,6 +95,16 @@ jQuery(document).ready( function($) {
 			}
 			
 		});
+		
+		// Offer Calc Email Address
+		if ( jQuery( '#_offercalc_enable_email_offer' ).attr( 'checked' ) ) {
+			var email_address = jQuery( '#_offercalc_email' ).val();
+			if ( email_address == '' ) {
+				jQuery('#_offercalc_email').after('<div class="offer-calc-price-error">Please, add an email address</div>');
+				error_wrap = jQuery('#_offercalc_email').closest('td').addClass("oc_error_box");
+				error = 'true';
+			}
+		}
 			
 		if( error == 'true' ) {
 			
