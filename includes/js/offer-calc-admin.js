@@ -61,21 +61,17 @@ jQuery(document).ready( function($) {
 		jQuery('.offer-calc-meta-error').html('');
 		
 		jQuery( ".wpd-mb-meta-multiple_textbox:first-child" ).each(function( j ) {
+			var meta_val_from = parseInt( jQuery(this).val() );
+			var meta_val_to = parseInt( jQuery(this).next().val() );
 			
-			var meta_val_to 	= jQuery(this).val();
-			
-			if( meta_val_to != '' && jQuery(this).next().val() != '' && meta_val_to >= jQuery(this).next().val() && jQuery(this).parent().closest(".wpd-mb-meta-repater-block").find(".replace_dropdown_check").attr("checked") != "checked" ) {
-				
-				jQuery(this).parent().closest("td").append('<div class="offer-calc-meta-error">From value must be less than To value.</div>');
-				
-				error_wrap = jQuery(this).parent().closest(".wpd-mb-meta-repater-block").addClass("oc_error_box");
-			
-				error = 'true';
-			
-			}
-			else {
-				
-				jQuery(this).parent().closest(".wpd-mb-meta-repater-block").removeClass("oc_error_box");
+			if ( jQuery(this).parent().closest(".wpd-mb-meta-repater-block").find(".replace_dropdown_check").attr("checked") != "checked" ) {
+				if( meta_val_from != '' && meta_val_to != '' && meta_val_from > meta_val_to ) {
+					jQuery(this).parent().closest("td").append('<div class="offer-calc-meta-error">From value must be less than To value.</div>');
+					error_wrap = jQuery(this).parent().closest(".wpd-mb-meta-repater-block").addClass("oc_error_box");
+					error = 'true';
+				} else {
+					jQuery(this).parent().closest(".wpd-mb-meta-repater-block").removeClass("oc_error_box");
+				}
 			}
 			
 		});
