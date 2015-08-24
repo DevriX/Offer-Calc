@@ -36,8 +36,21 @@ If you need a shortcode usage, use this snippet:
 4. Offer Calc shortcode insert into the page content
 5. Offer Calc Widget
 6. Offer Cacl Help Page
+7. Enable Email option
+8. Replace Dropdown with other input field
 
 == Changelog ==
+
+v1.2
+(2015/08/24)
+Offer Calc Pro version was merged to the core plugin.
+Numerous improvements of admin options, new options and fields were added.
+
+v1.1
+(2015/03/23)
+Updated I18n hook
+Serbian translation added.
+Styling updates
 
 v1.0
 (2014/08/20)
