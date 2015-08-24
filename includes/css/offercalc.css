@@ -126,14 +126,11 @@ table.shortcode_offercalc_table td {
 }
 .offer_calc_ordertitle_service{
 	display:block;
-	font-weight:bold;
 	float:left;
 	width: 100%;
-	max-height:10px;
 	min-height:33px;
-	overflow:hidden;
-	max-width:125px;
 	margin-bottom:5px;
+	font-weight:bold;
 }
 .offer_calc_orderlist {
 	float: left;
