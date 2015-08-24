@@ -254,12 +254,9 @@ table.shortcode_offercalc_table td {
 	width:100%;
 }
 .ofc_cnt_radio_shortcode{
-	width:22%;
-	margin:4px;
-	border: 1px solid #ccc !important;
+	border: 1px solid #ccc;
 	border-radius:3px;
 	outline:0 none;
-	backgrund:#ffffff !important;
 }
 .offer_selector_multi_shortcode.multi{
 	border: 1px solid #ccc ;
@@ -275,8 +272,9 @@ table.shortcode_offercalc_table td {
 	outline:0 none;
 	border: 1px solid #ccc ;
 }
-.ofc-lbl {
-    margin: 0 10px;
+.offercalc_wrapper input[type="checkbox"],
+.offercalc_wrapper input[type="radio"] {
+	margin-right: 10px;
 }
 .offer_email {
     margin: 10px 10px 10px 0;
