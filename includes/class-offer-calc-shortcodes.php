@@ -115,7 +115,7 @@ class Offer_Calc_Shortcodes {
 													$end = 40;
 												}
 												
-												$service_cnt = '<select id="offer_count_'.$id.'" class="offer_selector_shortcode" name="'.$offer_slug.'_count[]">';
+												$service_cnt = '<select id="offer_count_'.$id.'" class="offer_selector_shortcode offer_selector_pro" name="'.$offer_slug.'_count[]">';
 													for($i = $start; $i <= $end; $i++):
 													
 														$service_cnt .= '<option value="'.$i.'">'.$i.'</option>';
