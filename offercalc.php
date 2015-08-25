@@ -82,9 +82,7 @@ if ( ! defined( 'OFFER_CALC_PRO_SITE_URL' ) ) {
  * 
  */
 function offer_calc_load_textdomain() {
-	
 	load_plugin_textdomain( 'offercalc', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-  
 }
 
 add_action( 'plugins_loaded', 'offer_calc_load_textdomain' );
@@ -132,9 +130,8 @@ function offer_calc_install() {
 register_deactivation_hook( __FILE__, 'offer_calc_uninstall' );
 
 function offer_calc_uninstall() {
-	
+	// TODO: Uninstall hook updates
 	global $wpdb;
-	
 }
 
 /**
