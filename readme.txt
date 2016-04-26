@@ -2,7 +2,7 @@
 Contributors: devrix, nofearinc
 Tags: offer, offers, calculator, calculation, cost, administration, form, plugin, price, request, shortcode, shortcodes, website, widget
 Requires at least: 3.8
-Tested up to: 4.3
+Tested up to: 4.5
 Stable tag: 1.2
 License: GPLv2 or later
 
